@@ -15,9 +15,12 @@ public class SortStingsBasedOnLengths {
 		List<String> sortedColors = colors.stream().sorted((s1, s2) -> Integer.compare(s1.length(), s2.length())).collect(Collectors.toList());
 		System.out.println(sortedColors);
 		
-		//2st method
+		//2nd method
 		List<String> sortedColors2 = colors.stream().sorted(Comparator.comparing(String::length)).collect(Collectors.toList());
 		System.out.println(sortedColors2);
+
+		//longest string in the list
+		colors.stream().max(Comparator.comparing(String::length)).ifPresent(System.out::println);
 	}
 
 }

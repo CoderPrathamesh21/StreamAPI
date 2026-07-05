@@ -5,17 +5,22 @@ public class Employee {
 	private String name;
 	private int age;
 	private int salary;
+	private String department;
+	private String city;
+
 	
 	public Employee() {
 		super();
 		
 	}
 
-	public Employee(String name, int age, int salary) {
+	public Employee(String name, int age, int salary, String department, String city) {
 		super();
 		this.name = name;
 		this.age = age;
 		this.salary = salary;
+		this.department = department;
+		this.city = city;
 	}
 
 	public String getName() {
@@ -42,9 +47,17 @@ public class Employee {
 		this.salary = salary;
 	}
 
+	public String getDepartment() {
+		return department;
+	}
+
+	public String getCity() {
+		return city;
+	}
+
 	@Override
 	public String toString() {
-		return "Employee [name=" + name + ", age=" + age + ", salary=" + salary + "]";
+		return "Employee [name=" + name + ", age=" + age + ", salary=" + salary + ", department=" + department + ", city=" + city + "]";
 	}
 	
 	
